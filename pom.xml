@@ -38,8 +38,7 @@
     <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
     <spring-format.version>0.0.47</spring-format.version>
   <sonar.host.url>http://http://13.201.119.189:9000//</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>Luckey@12</sonar.password> 
+		 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
