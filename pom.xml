@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<packaging>war</packaging>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -13,6 +14,18 @@
   <version>4.0.0-SNAPSHOT</version>
 
   <name>petclinic</name>
+  <properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>5.3.34</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http://54.221.74.74:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>passw0rd</sonar.password> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+	</properties>
 
   <properties>
     <!-- Generic properties -->
@@ -43,6 +56,11 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+    <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
+</dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-cache</artifactId>
@@ -179,6 +197,21 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>KK FUNDA Releases Nexus Repository</name>
+	      <url>http://172.31.40.189:8081/repository/flipkart-release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>KK FUNDA Snapshot Nexus Repository </name>
+	      <url>http://172.31.40.189:8081/repository/flipkart-snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 
   <build>
     <plugins>
